@@ -53,14 +53,15 @@ python mvp.py
 The bot will begin fetching market data, analyzing it with GPT, and making trades automatically.
 
 ### Configuration
-Market Data: The bot is configured to fetch 30-day candlestick data for Bitcoin from the Upbit exchange. You can modify this to trade other cryptocurrencies or fetch data from different time intervals.
-AI Model: The bot currently uses GPT to make decisions. You can customize the decision-making process by modifying the prompt or switching to a different model.
-Risk Management: Customize the trading logic for risk management, such as implementing stop-loss or take-profit strategies.
-Dependencies
-Python 3.8+
-PyUpbit: Python wrapper for Upbit API.
-OpenAI: OpenAI GPT integration for decision-making.
-Python-dotenv: To load environment variables from a .env file.
+* Market Data: The bot is configured to fetch 30-day candlestick data for Bitcoin from the Upbit exchange. You can modify this to trade other cryptocurrencies or fetch data from different time intervals.
+* AI Model: The bot currently uses GPT to make decisions. You can customize the decision-making process by modifying the prompt or switching to a different model.
+* Risk Management: Customize the trading logic for risk management, such as implementing stop-loss or take-profit strategies.
+
+### Dependencies
+* Python 3.8+
+* PyUpbit: Python wrapper for Upbit API.
+* OpenAI: OpenAI GPT integration for decision-making.
+* Python-dotenv: To load environment variables from a .env file.
 All dependencies can be found in the requirements.txt file.
 
 ### Contributing
