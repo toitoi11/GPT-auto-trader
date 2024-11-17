@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Log</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Trading Log</h1>
+        <div>Total Asset Value: {{ total_value }}</div>
+        <div>Duration: {{ duration }}</div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Decision</th>
+                    <th>Reason</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in logs %}
+                <tr>
+                    <td>{{ log["decision"] }}</td>
+                    <td>{{ log["reason"] }}</td>
+                    <td>{{ log["amount"] }}</td>
+                    <td>{{ log["price"] }}</td>
+                    <td>{{ log["timestamp"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
